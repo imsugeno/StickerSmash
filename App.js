@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { useState, useRef } from 'react';
 import ImageViewer from './components/ImageViewer';
@@ -94,7 +94,7 @@ export default function App() {
           <Button theme={"primary"} label={"Choose a photo"} onPress={pickImageAsync} />
           <Button label={"Use this photo"} onPress={() => setShowAppOptions(true)} />
         </View>
-      )};
+      )}
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
